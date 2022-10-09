@@ -1,0 +1,19 @@
+.container {
+  margin: 45px auto;
+  max-width: 45vw;
+}
+
+.center {
+  text-align: center;
+}
+.container h1 {
+  color: orange;
+}
+.container h2 {
+  color: cadetblue;
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 80vw;
+  }
+}
