@@ -4,9 +4,9 @@ import styles from "../styles/Blogs.module.css";
 import * as fs from "fs";
 import { platform } from "os";
 import InfiniteScroll from "react-infinite-scroll-component";
-
+// blah
 const Blogs = (props) => {
-  const [allPosts, setAllPosts] = useState([]);
+  const [allPosts, setAllPosts] = useState(props.allPosts);
   const [count, setCount] = useState(5);
   const [loadmore, setLoadMore] = useState(true);
   // NOTE:  // if we use useEffect the contents will be fetched in the client side just like how we were doing in react

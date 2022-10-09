@@ -64,15 +64,13 @@ const Slug = (props) => {
 // for SSG we can't use an API call to get the data
 // we need to somewhat define API's itself here in getStaticProps
 export async function getStaticPaths() {
+  let allb = await fs.promises.readdir(`blogData`);
+  allb = allb.map((item) => {
+    return { params: { slug: item.split(".")[0] } };
+  });
   return {
-    paths: [
-      { params: { slug: "how-to-learn-java" } },
-      { params: { slug: "how-to-learn-javascript" } },
-      { params: { slug: "how-to-learn-nextjs" } },
-      { params: { slug: "how-to-learn-python" } },
-      { params: { slug: "how-to-learn-reactjs" } },
-    ],
-    fallback: false,
+    paths: allb,
+    fallback: false, // false or 'blocking'
   };
 }
 export async function getStaticProps(context) {
