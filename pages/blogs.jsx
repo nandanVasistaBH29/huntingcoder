@@ -23,7 +23,9 @@ const Blogs = (props) => {
       return;
     }
     setCount((prev) => prev + 5);
-    const res = await fetch(`http://localhost:3000/api/blogs?max=${count}`);
+    const res = await fetch(
+      `https://huntingcoder-puce.vercel.app/blogs/=${count}`
+    );
     const data = await res.json();
     if (data.join() == allPosts.join()) {
       setLoadMore(false);
