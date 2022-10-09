@@ -24,7 +24,7 @@ const Blogs = (props) => {
     }
     setCount((prev) => prev + 5);
     const res = await fetch(
-      `https://huntingcoder-puce.vercel.app/blogs/=${count}`
+      `https://huntingcoder-nandanvasistabh29.vercel.app/api/blogs?max=${count}`
     );
     const data = await res.json();
     if (data.join() == allPosts.join()) {
