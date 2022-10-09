@@ -54,7 +54,7 @@ const Blogs = (props) => {
                 <Link href={`/blogpost/${post.slug}`}>
                   <div className={styles.blogItems}>
                     <h3>
-                      {idx} {post.title} {new Date().getFullYear()}
+                      {idx}) {post.title} {new Date().getFullYear()}
                     </h3>
                     <p>{post.content.substr(0, 100)} ...</p>
                   </div>
