@@ -41,7 +41,6 @@ const Blogs = (props) => {
           dataLength={allPosts.length} //This is important field to render the next data
           next={fetchData}
           hasMore={loadmore}
-          loader={<h4>Loading...</h4>}
           endMessage={
             <p style={{ textAlign: "center", color: "orange" }}>
               <b>Yay! You have seen it all</b>
