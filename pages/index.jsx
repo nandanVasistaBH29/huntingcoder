@@ -26,6 +26,10 @@ export default function Home(props) {
           name="keywords"
           content="Blog,Coding Blog,Hunter Blog,react,next,html,css,JavaScript"
         />
+        <meta
+          name="google-site-verification"
+          content="GGiivunvm8VhDQtKeIWWUkyoKaWiMN1eXppdmc7D_qE"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Script src="/analytics.js" strategy="lazyOnload" />
